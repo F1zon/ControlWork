@@ -16,3 +16,14 @@ string[] Input(string[] words) {
     return words;
 }
 
+// Функция поиска строк 3 или меньше 2
+void Search(string[] words) {
+    int j = 0;
+    string[] newArray = new string[10];
+
+    for (int i = 0; i < 10; i++) {
+        if (words[i].Length <= 3) {
+            newArray[j] = words[i];
+        }
+    }
+}
