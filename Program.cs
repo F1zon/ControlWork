@@ -1,6 +1,7 @@
-﻿// main
+﻿// основа
 string[] words = new string[10];
 Input(words);
+Search(words);
 
 // Функция ввода слов в массив 1
 string[] Input(string[] words) {
@@ -22,8 +23,20 @@ void Search(string[] words) {
     string[] newArray = new string[10];
 
     for (int i = 0; i < 10; i++) {
+        if (words[i] == "stop") break;
+
         if (words[i].Length <= 3) {
             newArray[j] = words[i];
+            j++;
         }
+    }
+
+    Output(newArray, j);
+}
+
+// Функция вывода массива
+void Output(string[] words, int n) {
+    for (int i = 0; i < n; i++) {
+        Console.Write($"{words[i]} ");
     }
 }
