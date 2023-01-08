@@ -17,7 +17,7 @@ string[] Input(string[] words) {
     return words;
 }
 
-// Функция поиска строк 3 или меньше 2
+// Функция поиска строк 3 или меньше 2-3
 void Search(string[] words) {
     int j = 0;
     string[] newArray = new string[10];
@@ -34,9 +34,9 @@ void Search(string[] words) {
     Output(newArray, j);
 }
 
-// Функция вывода массива
-void Output(string[] words, int n) {
+// Функция вывода массива 4
+void Output(string[] newArray, int n) {
     for (int i = 0; i < n; i++) {
-        Console.Write($"{words[i]} ");
+        Console.Write($"{newArray[i]} ");
     }
 }
